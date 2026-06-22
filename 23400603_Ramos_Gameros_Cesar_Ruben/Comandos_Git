@@ -1,3 +1,248 @@
-Comando
-Descripcion de comando
-Ejemplo de caso de uso
+1.-git init
+Este comanndo convierte una carpeta normal en un repositorio Git
+En segundo plano, crea una .git carpeta oculta, esta carpeta contiene todo lo que Git necesita
+historial, ramas registros y metadatos que permiten el control de versiones.
+
+Normalmente se usa cuando se empieza un proyecto desde 0
+
+2.- git config
+Este comando te permite configurar tu nombre y correo electronico para que Git pueda etiquetar 
+cada una de tus confirmaciones con tu identidad
+
+git config -- global user.name "Tu nombre"
+git config -- global user.email "Tu correo"
+
+(La opcion global signiffica que se aplica a todos tus proyectos git)
+
+3.- git clone
+ git clone <https://github.com/user/project.git>
+Este comando descarga el proyecto completo, incluyendo todos los archivos, carpetas, ramas 
+e historial de confirmaciones, para que obtengas una copia local completa y tambien establece
+una conexion con el repositorio remoto para que puedas enviar facilmente tus cambios o descargar actualizaciones de otros usuarios.
+
+
+4.- git remote
+ Mediante este comando puede agregar, ver o eliminar conexiones remotas. El repositorio puede estar alojado en cualquier lugar, como GITHUB o en tu propio servidor
+Si se quiere comprobar si tu proyecto tiene algun repositorio configurado, ejecuta:
+git remote -v (Mostrara todas las URL remotas a las que tu proyecto puede enviar o desde las que puede recibir datos.)
+
+Ejemplo de salida:
+
+origin  https://github.com/algomaster-io/git-tutorial.git (fetch)
+origin  https://github.com/algomaster-io/git-tutorial.git (push)
+
+Si necesita agregar un nuevo control remoto, utilice:
+
+git remote add origin <https://github.com/user/project.git>
+
+Los siguientes comandos estan orientados a empezar a trabajar con el codigo y realizar el seguimiento de cambios
+5.- git status 
+Es como el panel de control del proyecto, una instantanea de lo que sucede en tu directorio de trabajo
+Cuando no se este seguro de que ha cambiado, que es una puesta en escena o que no se ha rastreado, status te da una vision completa
+(Te ayuda a decidir que mostrar, que omitir y que nesecita atencion)
+
+6.- git add
+Cuando se ejecuta, se le dice a Git que incluya esto en la proxima instantanea.
+No basta con editar un archivo, Git no registra tus cambios automaticamente.
+Hasta que no se ejecute el comando mencionado, esos cambios son invisibles para Git cuando llega el momento de confirmarlos
+
+Puedes preparar un archivo específico ejecutando git add filename o si desea preparar todos los cambios realizados en el directorio actual
+
+git add .
+(es como empaquetar los cambios de tu código en una caja y prepararlos para su envio)
+
+7.- git commit
+Es el equivalente al boton de guardar
+Toma una instantanea de tu codigo fuente en ese momento junto con un mensaje que describe que cambio y porque
+
+git commit -m "Add login feature"  Ese mensaje no es solo una etiqueta, es un registro de lo que hiciste
+
+Si estás trabajando en archivos que Git ya conoce (es decir, que ya se han confirmado anteriormente)
+puedes omitir el git addpaso usando:
+
+git commit -a -m "Update login error handling"
+
+Esta -a bandera le indica a git que prepare automaticamente todos los archivos modificados antes de confirmas la transaccion
+
+Siguiendo el mismo estilo que llevas:
+
+8.- git push
+Este comando envia tus confirmaciones desde tu repositorio local a un repositorio remoto, como GitHub o GitLab.
+
+Permite compartir tus cambios con otras personas y mantener sincronizado el proyecto.
+
+git push origin main
+
+Este comando sube tus cambios a la rama `main` del repositorio remoto.
+
+(Es como publicar tu trabajo para que los demas miembros del equipo puedan verlo y utilizarlo).
+
+
+9.- git pull
+Este comando obtiene las confirmaciones mas recientes del repositorio remoto y las fusiona automaticamente con tu rama local actual.
+
+git pull origin main
+
+Se recomienda ejecutarlo antes de empezar a trabajar o antes de hacer un `git push`, ya que evita sobrescribir accidentalmente el trabajo de otros usuarios.
+
+(Es como descargar la version mas reciente del proyecto antes de continuar trabajando).
+
+10.- git fetch
+Este comando se conecta al repositorio remoto y descarga las actualizaciones mas recientes, como nuevas confirmaciones o ramas, pero no las integra en tu proyecto local.
+
+git fetch origin
+
+Tu directorio de trabajo permanece exactamente igual y puedes revisar los cambios antes de fusionarlos.
+
+(Es como pedir una copia de las actualizaciones para revisarlas antes de agregarlas a tu proyecto).
+
+11.- git branch
+Este comando permite crear, listar y administrar ramas.
+
+Las ramas sirven para trabajar en nuevas funciones o corregir errores sin afectar el codigo principal.
+
+Para crear una nueva rama:
+
+git branch new-feature
+
+Para ver todas las ramas locales:
+
+git branch
+
+La rama actual aparecera marcada con un asterisco (*).
+
+(Es como crear una copia de tu proyecto para experimentar o desarrollar nuevas funciones de manera segura).
+
+12.- git checkout
+Este comando permite cambiar entre ramas, restaurar archivos o moverse a una confirmacion anterior.
+
+Para cambiar a una rama existente:
+
+git checkout new-feature
+
+Para crear una rama y cambiar a ella en un solo paso:
+
+git checkout -b new-feature
+
+Tambien puede utilizarse para descartar cambios en un archivo:
+
+git checkout -- style.css
+
+(Es como moverte entre diferentes versiones de tu proyecto o restaurar archivos a un estado anterior).
+
+13.- git merge
+Este comando combina los cambios de una rama con otra.
+
+git merge new-feature
+
+Git intentara fusionar automaticamente los cambios. Si dos ramas modificaron la misma parte de un archivo, se producira un conflicto de fusion que debera resolverse manualmente.
+
+Despues de resolver el conflicto:
+
+git add .
+git commit
+
+(Es como unir el trabajo realizado en diferentes copias del proyecto en una sola version).
+
+14.- git rebase
+Este comando reorganiza el historial de confirmaciones para que sea mas limpio y lineal.
+
+git rebase main
+
+Toma las confirmaciones de tu rama actual y las coloca encima de las confirmaciones mas recientes de `main`.
+
+Se recomienda no utilizarlo en ramas compartidas por varios desarrolladores, ya que reescribe el historial.
+
+(Es como mover tu trabajo para que parezca que siempre estuvo basado en la version mas reciente del proyecto).
+
+15.- git log
+Este comando muestra el historial de confirmaciones del proyecto.
+
+git log
+
+Para una vista mas compacta:
+
+git log --oneline
+
+Para visualizar las ramas y fusiones:
+
+git log --graph
+
+Permite conocer que cambios se realizaron, quien los hizo y en que momento.
+
+(Es como consultar el historial completo de cambios de tu proyecto).
+
+
+16.- git diff
+Este comando muestra las diferencias entre archivos, ramas o confirmaciones.
+
+git diff
+
+Tambien puede utilizarse para comparar ramas:
+
+git diff branch1..branch2
+
+Resalta las lineas agregadas, eliminadas o modificadas.
+
+(Es como comparar dos versiones de un documento para ver exactamente que cambio).
+
+17.- git stash
+Este comando guarda temporalmente los cambios que aun no estan listos para confirmarse.
+
+git stash
+
+Para recuperar los cambios:
+
+git stash apply
+
+Para recuperarlos y eliminar el almacenamiento temporal:
+
+git stash pop
+
+(Es como guardar tu trabajo en un cajon para retomarlo mas tarde).
+
+18.- git reset
+Este comando permite regresar el proyecto a una confirmacion anterior.
+
+Reinicio suave:
+
+git reset --soft HEAD~1
+
+Mantiene los cambios preparados.
+
+Reinicio mixto:
+
+git reset HEAD~1
+
+Mantiene los cambios en el directorio de trabajo pero los elimina del area de preparacion.
+
+Reinicio completo:
+
+git reset --hard HEAD~1
+
+Elimina completamente los cambios no confirmados.
+
+(Es como regresar el tiempo de tu proyecto a un punto anterior).
+
+19.- git revert
+Este comando deshace los cambios de una confirmacion anterior sin eliminar el historial.
+
+git revert <commit-hash>
+
+Git crea una nueva confirmacion que revierte los cambios realizados por la confirmacion indicada.
+
+Es la opcion mas segura cuando el codigo ya fue compartido con otros desarrolladores.
+
+(Es como crear una nueva accion que cancela una accion anterior, sin borrar el historial del proyecto).
+
+
+20.- git cherry-pick
+Este comando toma una confirmacion especifica de otra rama y la aplica a la rama actual.
+
+git cherry-pick <commit-hash>
+
+Resulta util cuando solo necesitas un cambio en particular y no deseas fusionar toda la rama.
+
+Git crea una nueva confirmacion con las mismas modificaciones, pero con un identificador diferente.
+
+(Es como copiar una pagina especifica de otro documento y agregarla al documento en el que estas trabajando).
