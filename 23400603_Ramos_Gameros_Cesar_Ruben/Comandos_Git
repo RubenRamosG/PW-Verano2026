@@ -64,8 +64,6 @@ git commit -a -m "Update login error handling"
 
 Esta -a bandera le indica a git que prepare automaticamente todos los archivos modificados antes de confirmas la transaccion
 
-Siguiendo el mismo estilo que llevas:
-
 8.- git push
 Este comando envia tus confirmaciones desde tu repositorio local a un repositorio remoto, como GitHub o GitLab.
 
