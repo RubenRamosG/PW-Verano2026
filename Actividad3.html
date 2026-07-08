@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h3 id="Inicio">Travel World</h3>
+    <h5><strong>La mejor agencia de viajes</strong> para conocer los destinos mas increibles de México y el mundo</h5> <hr>
+    <h3>Menú</h3>
+    <p>
+        <a href="#Inicio">Inicio</a> |
+        <a href="#Destinos">Destinos</a> |
+        <a href="#Promociones">Promociones</a> |
+        <a href="#Paquetes">Paquetes</a> |
+        <a href="#Contacto">Contacto</a>
+    </p>
+
+
+
+    <hr>
+    <h3>Bienvenido</h3>
+    <p>En travel world ofrecemos paquetes turisticos para toda la familia. Nuestro objetivo es brindar las mejores experiencias de viaje con<em> excelente servicio y precios accesibles </em></p>
+    <img src="https://guiauniversitaria.mx/wp-content/uploads/2026/05/carreras-con-las-que-podrias-viajar.jpg-3.jpg">
+    <hr>
+    
+    <h3 id="Destinos"> Destinos populares</h3>
+    <h4>Playas</h4> 
+    <ul>   
+        <li>Cancun</li>
+        <li>Puerto Vallarta</li>
+        <li>Los Cabos</li>
+        <li>Riviera Maya</li>
+     </ul>
+     <h4>Pueblos Magicos</h4>
+     <ol>
+        <li>Tequila</li>
+        <li>Mazamitla</li>
+        <li>Real de catorce</li>
+        <li>Taxco</li>
+     </ol> <hr>
+
+    <h3 id="Promociones">Promociones    </h3>
+    <p id="promocionesP">Reserva durante este mes y obten un <strong>20% de descuento</strong> en paquetes seleccionados. <br>
+        Los primeros 50 clientes <em>recibiran un tour gratuito</em> en su destino.
+    </p>
+    <hr>
+
+    <h3 id="Paquetes">Paquetes disponibles</h3>
+    <table border="1">
+        <tr>
+            <th>Destino</th>
+            <th>Dias</th>
+            <th>Hotel</th>
+            <th>Precio</th>
+        </tr>
+        
+        <tr>
+            <td>Cancun</td>
+            <td>5</td>
+            <td>5 estrellas</td>
+            <td>$12500</td>
+        </tr>
+
+        <tr>
+            <td>Puerto Vallarta</td>
+            <td>5</td>
+            <td>4 estrellas</td>
+            <td>$9800</td>
+        </tr>
+
+          <tr>
+            <td>Los Cabos</td>
+            <td>6</td>
+            <td>5 estrellas</td>
+            <td>$15300</td>
+        </tr>
+
+          <tr>
+            <td>Mazamitla</td>
+            <td>3</td>
+            <td>Cabaña</td>
+            <td>$59000</td>
+        </tr>
+
+          <tr>
+            <td>Riviera Maya</td>
+            <td>7</td>
+            <td>Todo incluido</td>
+            <td>$18900</td>
+        </tr>
+
+
+    </table>
+
+
+
+    <h3>PORQUE VIAJAR CON NOSOTROS?</h3>
+
+        <p>Hoteles certificados <br>
+        Guias turisticos <br>
+        Seguro de viajero <br>
+        Atencion 24/7 <br>
+        Facilidades de pago
+        </p>
+    <hr>
+
+    <h3>Formulario de reservacion</h3>
+<form>
+    <table border="1">
+    <tr>
+        <th colspan="4">Datos del Cliente</th>
+    </tr>
+        <tr>
+      <td>Nombre</td>
+      <td><input type="text" id="nombre"></td>
+      <td>Correo</td>
+      <td><input type="text" id="correo"></td>
+    </tr>
+    <tr>
+        <td>Contraseña</td>
+        <td><input type="text" id="password"></td>
+        <td>Edad</td>
+        <td><input type="number" id="edad"></td>
+    </tr>
+      <tr>
+        <td>Fecha de viaje</td>
+        <td><input type="date" id="fechaV"></td>
+        <td>Hora de salida</td>
+        <td><input type="time" id="horaS"></td>
+    </tr>
+      <tr>
+        <td>Numero de viajeros</td>
+        <td><input type="number" id="numViaj"></td>
+        <td>Presupuesto</td>
+        <td><input type="range" id="Presupuesto"></td>
+    </tr>
+      <tr>
+        <td>Color de pulsera</td>
+        <td><input type="color" id="colorPulsera"></td>
+        <td>Identificacion</td>
+        <td><input type="file" id="archIdentificacion"></td>
+    </tr>
+
+        <tr><th colspan="4">Servicios</th></tr>
+        <tr>
+             <td colspan="4">
+               <input type="checkbox"> Transporte <br>
+                <input type="checkbox"> Hotel <br>
+                <input type="checkbox"> Desayuno <br>
+                       <input type="checkbox"> Seguro de viaje
+
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4">Tipo de habitacion
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+            <input type="radio"> Individual
+            <input type="radio"> Doble
+            <input type="radio"> Familiar
+            </td>
+        </tr>
+            <td colspan="1">Destino</td>
+            <td>
+                <select>
+                    <option>Cancun</option>
+                    <option>Puerto Vallarta</option>
+                    <option>Los Cabos</option>
+                    <option>Mazamitla</option>
+                    <option>Taxco</option>
+                </select>
+            </td>
+            <td colspan="2">Forma de pago
+            <select>
+                <option>Tarjeta</option>
+                <option>Efectivo</option>
+                <option>Transferencia</option>
+
+            </select>
+            </td>
+            <tr>
+
+        </tr>
+        <td>Comentarios</td>
+        <td colspan="3">
+        <textarea rows="5" cols="50"></textarea>
+        </td>
+        <tr>
+        </tr>
+
+        <tr>
+           <th colspan="2"><input type="submit" value="Reservar"></th>
+            <th colspan="2"><input type="reset" value="Limpiar"></th>
+        </tr>
+
+    </table>
+
+</form>
+
+
+    <h3 id="Contacto">Informacion de contacto</h3>
+    <p>Direccion: Av. Principal#100, Tepic, Nayarit <br>
+        <br>
+        Telefono: (311) 123-4567 <br>
+        
+        <br>
+        Correo: contacto@travelworld.com
+    </p>
+
+    <h3>Enlaces de interes</h3>
+    <p>
+        <a href="#Destinos">Buscar más destinos</a><br>
+        <a href="#Inicio">Volver al inicio</a><br>
+        <a href="#Paquetes">Ver paquetes</a>
+    </p>
+</body>
+</html>
