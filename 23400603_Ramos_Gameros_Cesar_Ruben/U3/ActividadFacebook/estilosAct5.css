@@ -1,0 +1,120 @@
+
+body{
+    background-color: rgba(199, 220, 239, 0.886);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{
+    color: #1877f2;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+
+p{
+    text-align: left;
+    font-size: 28px;
+    color: #1c1e21;
+}
+
+.divPrincipal{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.divIzq{
+    width: 500px;
+}
+
+.divDerecho{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px black;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Correo, .Contraseña{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: black;
+    border: solid 1px #dddfe2;
+    border-radius: 6px;
+    background-color: white;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+}
+
+#inicioSesionH{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+h5{
+    font-style: italic;
+    color: #1877f2;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 20px;
+}
+
+h4{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: green;
+    border-radius: 10px;
+    padding: 12px ;
+    margin: 0;
+}
+
+
+@media (max-width: 800px){
+ 
+    .divPrincipal{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+ 
+    .divIzq{
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+    }
+ 
+    h1{
+        font-size: 60px;
+        text-align: center;
+    }
+ 
+    p{
+        text-align: center;
+        font-size: 24px;
+    }
+ 
+    .divDerecho{
+        width: 100%;
+        max-width: 400px;
+    }
+}
