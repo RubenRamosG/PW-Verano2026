@@ -1,0 +1,114 @@
+
+body{
+    font-family:  Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#letraG{ color: #4285f4; } 
+
+#letraO{ color: #ea4335;} 
+
+.letraO{ color: #fbbc05;} 
+
+.letraGG{ color: #4285f4;} 
+
+#letraL{ color: #34a853;} 
+
+#letraE {color: #ea4335;}
+
+header{
+    padding: 20px 30px;
+}
+
+.esqDer{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+h4{
+  color: #5f6368;  
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#botonAcceder{
+    background-color: #1a73e8;
+    border-radius: 20px;
+    padding: 9px 24px;
+    color: white;
+}
+
+.Nombre{
+    display: flex;
+    gap: 5px; 
+    font-size: 90px;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+.Buscador{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+
+}/*este es mi div cajaro*/
+
+#buscador{
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    width: 550px;
+    max-width: 60%;
+    height: 46px;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 16px;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    outline: none;
+}
+
+.EnlacesBuscador{
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buscarGoogle, .suerteBus{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #3c4043;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.Enlaces{
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    border-top: 1px solid #dadce0;
+    padding: 15px 30px;
+}
+
+.enlacesIzq, .enlacesDer{
+    display: flex;
+    gap: 25px;
+}
+
+.Enlaces a{
+    color: #70757a;
+    text-decoration: none;
+    font-size: 14px;
+}
