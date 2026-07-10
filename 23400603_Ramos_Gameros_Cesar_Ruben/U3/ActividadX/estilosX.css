@@ -1,0 +1,248 @@
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  color: gray;
+  font-size: 15px;
+}
+
+.Contenedor {
+  display: block;
+  text-align: center;
+}
+
+.ParteIzq,
+.ParteDerecha {
+  width: 100%;
+}
+
+.ParteDerecha {
+  height: auto;
+}
+
+#imagenX {
+  width: 40%;
+  margin-top: 20px;
+}
+
+#etiH1 {
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+#etiUnete {
+  font-size: 30px;
+}
+
+#registroGoogle,
+#registroApple,
+#crearCuenta,
+#etiInicioSesion {
+  width: 80%;
+  margin: 15px auto;
+}
+
+#etiH4 {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer {
+  width: 90%;
+  margin: 40px auto;
+  font-size: 12px;
+  text-align: center;
+}
+
+.Enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 40px;
+  gap: 4px;
+}
+
+.EnlacesPrincipales,
+.EnlacesSecundarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.EnlacesPrincipales a,
+.EnlacesSecundarios a {
+  font-size: 12px;
+  padding: 0 8px;
+  position: relative;
+  color: #6e767d;
+}
+
+.EnlacesPrincipales a:hover,
+.EnlacesSecundarios a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  body {
+    background-color: black;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .Contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 30px ;
+  }
+
+  .ParteIzq,
+  .ParteDerecha {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ParteDerecha {
+    height: auto;
+  }
+
+  #imagenX {
+    width: 50%;
+  }
+
+  #etiUnete,
+  #etiH1 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #etiH1 {
+    font-size: 60px;
+  }
+
+  #etiUnete {
+    font-size: 28px;
+  }
+
+  #registroGoogle,
+  #registroApple,
+  #crearCuenta,
+  #etiInicioSesion {
+    background-color: white;
+    border-radius: 40px;
+    width: 320px;
+    padding: 15px;
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  #crearCuenta {
+    background-color: blue;
+    color: white;
+  }
+
+  #etiH4 {
+    color: white;
+  }
+
+  #etiInicioSesion {
+    background-color: black;
+    color: rgb(7, 156, 220);
+    font-style: italic;
+    border: 2px solid #cfd9de;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: black;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .Contenedor {
+    display: flex;
+    gap: 40px;
+    height: 100vh;
+  }
+
+  .ParteIzq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .ParteDerecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 40%;
+  }
+
+  #imagenX {
+    width: 80%;
+  }
+
+  #etiUnete,
+  #etiH1 {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  #etiH1 {
+    font-size: 90px;
+  }
+
+  #etiUnete {
+    font-size: 30px;
+  }
+
+  #registroGoogle,
+  #registroApple,
+  #crearCuenta,
+  #etiInicioSesion {
+    background-color: white;
+    border-radius: 40px;
+    width: 380px;
+    padding: 15px;
+    text-align: center;
+    margin: 25px;
+  }
+
+  #crearCuenta {
+    background-color: blue;
+    color: white;
+  }
+
+  #etiH4 {
+    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #etiInicioSesion {
+    background-color: black;
+    color: rgb(7, 156, 220);
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    border: 2px solid #cfd9de;
+    border-radius: 40px;
+    padding: 15px;
+  }
+}
