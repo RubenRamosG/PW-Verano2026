@@ -1,4 +1,4 @@
-const API_URL = "backend-enhyt3ex1-rubenpw.vercel.app/peliculas";
+const API_URL = "https://backend-enhyt3ex1-rubenpw.vercel.app/peliculas";
 
 const formulario = document.getElementById("formulario");
 const id = document.getElementById("id");
